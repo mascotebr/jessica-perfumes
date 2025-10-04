@@ -1,0 +1,58 @@
+body {
+  width: 100vw;
+  background-color: #fcfcfc;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  color: #000;
+  font-weight: 900;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.center {
+  text-align: center;
+  width: calc(50vw - 24px);
+}
+
+.card {
+  box-shadow: 0px 4px 8px 2px #00000025;
+  width: 100%;
+  padding: 8px;
+
+  text-align: center;
+}
+h1 {
+  text-align: left;
+  line-height: 110%;
+  font-size: 28px;
+}
+
+h2 {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+p {
+  margin-top: 4%;
+  font-size: 18px;
+}
+
+.blue {
+  color: hwb(240 40% 1%);
+}
+
+.pink {
+  color: hwb(350 40% 0%);
+}
