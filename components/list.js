@@ -1,35 +1,37 @@
 import Link from "next/link";
 
 export default function List() {
+  const wame =
+    "https://wa.me/5515996948425?text=Olá, me interresei pelo perfume ";
   const listaMasculinos = [
     {
-      nome: "LaurPolo Green ent",
-      foto: "",
+      nome: "LaurPolo Green Ent",
+      foto: "/laurPoloGreenent.png",
       preco: 120.0,
     },
     {
       nome: "Sauvage",
-      foto: "",
+      foto: "/sauvage.png",
       preco: 120.0,
     },
     {
       nome: "Invictus",
-      foto: "",
+      foto: "/invictus.webp",
       preco: 120.0,
     },
     {
-      nome: "Scandal masculino",
-      foto: "",
+      nome: "Scandal",
+      foto: "/scandal.webp",
       preco: 120.0,
     },
     {
-      nome: "Creed advento ",
-      foto: "",
+      nome: "Creed Advento",
+      foto: "/creedadvento.webp",
       preco: 120.0,
     },
     {
       nome: "Bleu de chanel",
-      foto: "",
+      foto: "/bleuchanel.jpg",
       preco: 120.0,
     },
   ];
@@ -37,43 +39,35 @@ export default function List() {
   const listaFemininos = [
     {
       nome: "La vie est belle ",
-      foto: "",
+      foto: "/lavieestbelle.webp",
       preco: 120.0,
     },
     {
       nome: "La nuit tresor",
-      foto: "",
+      foto: "/lanuittresor.jpg",
       preco: 120.0,
     },
   ];
+
+  const card = (item) => {
+    return (
+      <div key={item.nome} className="card">
+        <Link href={`${wame} ${item.nome}`}>
+          <div>
+            <img src={item.foto} alt={item.nome} />
+            <h2>{item.nome}</h2>
+          </div>
+          <div className="p">R${item.preco}</div>
+        </Link>
+      </div>
+    );
+  };
   return (
     <>
-      <div className="center" style={{ width: "100%" }}>
-        <Link href={"https://wa.me/5515996948425"}>Jéssica Perfumes</Link>
-      </div>
-      <h1 className="blue">Perfumes Inspirados Masculinos</h1>
-      <section className="list">
-        {listaMasculinos.map((item) => (
-          <div key={item.nome} className="card">
-            <h2>{item.nome}</h2>
-            <p>
-              <span>R$</span> <span>{item.preco}</span>
-            </p>
-          </div>
-        ))}
-      </section>
-      <h1 className="pink">Perfumes Inspirados Femininos</h1>
-      <section className="list">
-        {listaFemininos.map((item) => (
-          <div key={item.nome} className="card">
-            {/* <img src={item.foto} width={200} height={250} alt={item.nome} /> */}
-            <h2>{item.nome}</h2>
-            <p>
-              <span>R$</span> <span>{item.preco}</span>
-            </p>
-          </div>
-        ))}
-      </section>
+      <h1 className="blue">Masculinos</h1>
+      <section className="list">{listaMasculinos.map(card)}</section>
+      <h1 className="pink">Femininos</h1>
+      <section className="list">{listaFemininos.map(card)}</section>
     </>
   );
 }

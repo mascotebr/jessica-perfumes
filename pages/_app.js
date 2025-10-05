@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 function MyApp({ Component, pageProps }) {
   return (
     <main className={dmSans.className}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </main>
   );
 }
