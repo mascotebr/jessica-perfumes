@@ -52,7 +52,7 @@ export default function List() {
   const card = (item) => {
     return (
       <div key={item.nome} className="card">
-        <Link href={`${wame} ${item.nome}`}>
+        <Link href={`${wame}${item.nome}`}>
           <div>
             <img src={item.foto} alt={item.nome} />
             <h2>{item.nome}</h2>
