@@ -14,11 +14,11 @@ function Home() {
             Perfumes Inspirados
           </Link>
         </div>
-        <List />
         <small>
           Todos os perfumes são inspirados nesses perfumes exibidos, com uma
           caixa padrão para todos
         </small>
+        <List />
       </body>
     </html>
   );
